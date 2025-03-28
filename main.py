@@ -12,3 +12,6 @@ async def chat(message: Message):
     # Aquí deberías llamar a DeepSeek (simulamos respuesta)
     respuesta = f"🔍 DeepSeek responde: '{user_query}'. (Esta es una simulación.)"
     return {"response": respuesta}
+@app.get("/")
+def home():
+    return {"message": "El bot está activo. Usa /chat para interactuar."}
